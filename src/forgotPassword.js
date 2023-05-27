@@ -16,17 +16,24 @@ export default function  ForgotPasswordScreen () {
     };
   
     const handleChangePassword = () => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-          alert('Please enter a valid email address.');
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        favIconRef.current.href = '/forgot-password/';
+        return;
+      }
+      // Strong password validation
+      const strongPasswordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/;
+      if (!strongPasswordRegex.test(newPassword)) {
+          alert(
+              'Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, one digit, and one special character.'
+          );
           favIconRef.current.href = '/forgot-password/';
           return;
-        }
-        else{
-            favIconRef.current.href = '/change-password/';
-            return
-        }
-    };
+      }
+      favIconRef.current.href = '/change-password/';
+      return;
+  };
     
     return (
       <div className="container">
