@@ -1,5 +1,14 @@
 # Getting Started with Create React App
 
+Credentials:
+Username: admin
+Password: password
+
+Steps to run:
+1. Clone the project
+2. npm install
+3. npm start
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
