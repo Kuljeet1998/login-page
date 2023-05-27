@@ -3,7 +3,7 @@ import './App.css';
 import { useRef } from 'react'
 
 export default function  ForgotPasswordScreen () {
-    const favIconRef = useRef(null)
+    const urlRef = useRef(null)
     const [email, setEmail] = useState('');
     const [newPassword, setNewPassword] = useState('');
     
@@ -19,7 +19,7 @@ export default function  ForgotPasswordScreen () {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
         alert('Please enter a valid email address.');
-        favIconRef.current.href = '/forgot-password/';
+        urlRef.current.href = '/forgot-password/';
         return;
       }
       // Strong password validation
@@ -28,10 +28,10 @@ export default function  ForgotPasswordScreen () {
           alert(
               'Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, one digit, and one special character.'
           );
-          favIconRef.current.href = '/forgot-password/';
+          urlRef.current.href = '/forgot-password/';
           return;
       }
-      favIconRef.current.href = '/change-password/';
+      urlRef.current.href = '/change-password/';
       return;
   };
     
@@ -53,8 +53,7 @@ export default function  ForgotPasswordScreen () {
           className="input"
         />
         
-        <a ref={favIconRef} className="link"><button onClick={handleChangePassword} className="button">Change</button></a>
+        <a ref={urlRef} className="link"><button onClick={handleChangePassword} className="button">Change</button></a>
       </div>
     );
   };
-//   href='/change-password/'

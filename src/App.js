@@ -6,7 +6,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import ThirdPop from './passwordChange';
+import ChangePasswordScreen from './passwordChange';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<SignInScreen />} />
           <Route path="/forgot-password/" element={<ForgotPasswordScreen />} />
-          <Route path="/change-password/" element={<ThirdPop />} />
+          <Route path="/change-password/" element={<ChangePasswordScreen />} />
         </Routes>
       </Router>
     </>
