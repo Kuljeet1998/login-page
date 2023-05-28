@@ -9,6 +9,13 @@ Steps to run:
 2. npm install
 3. npm start
 
+Change password:
+Password should contain - 
+1. An uppercase
+2. A lower case
+3. A special character - @$!%*?&#
+4. Min length = 8
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
